@@ -22,13 +22,6 @@ long ForceTemp;          // Value without zero-ing value
 int CounterPulse;        // for calibration counter
 int IncomingByte;        // serial.read
 long Address = 0;        // Starting at the first byte on the eeprom
-//int weight;
-
-const int greenPin =  13;    // green LED pin 13 or onboard
-const int redPin = 12;       // red LED pin 12
-
-const int buttonPin = 2;     // the number of the pushbutton pin
-int buttonState = 0;         // variable for reading the pushbutton status
 
 //------EEprom-----function-----------------------------------
 //This write function will write a 4 byte (32bit) long to the eeprom at the specified Address to adress + 3.
@@ -174,37 +167,6 @@ void CalibrationMode()
     delay (2000);
   }
 
-  if (CounterPulse == 1)
-  {
-    ValueATemp = ForceValueRaw;  // store the 0 load value in a variable
-    Serial.println ("Calibration started >> Place calibration load on scales");
-    CounterPulse = 2;
-    digitalWrite(greenPin, HIGH);// turn LED on, added
-    delay (1000); // changed from 100
-    digitalWrite(greenPin, LOW);// turn LED off, added
-    delay (500);
-    digitalWrite(greenPin, HIGH);// turn LED on, added
-    delay (1000); // changed from 100
-    digitalWrite(greenPin, LOW);// turn LED off, added
-    delay (500);
-    digitalWrite(greenPin, HIGH);// turn LED on, added
-    delay (1000); // changed from 100
-    digitalWrite(greenPin, LOW);//turn LED off, added
-    delay (500);
-    digitalWrite(greenPin, HIGH);// turn LED on, added
-    delay (1000); // changed from 100
-    digitalWrite(greenPin, LOW);// turn LED off, added
-    delay (500);
-    digitalWrite(greenPin, HIGH);// turn LED on, added
-    delay (1000); // changed from 100
-    digitalWrite(greenPin, LOW);// turn LED off, added
-    delay (500);
-    digitalWrite(greenPin, HIGH);// turn LED on, added
-    delay (1000); // changed from 100
-    digitalWrite(greenPin, LOW); //turn LED off, added
-    delay (500);
-    digitalWrite(greenPin, HIGH);// turn LED on, added
-  }
 
   if (CounterPulse == 3)
   {
