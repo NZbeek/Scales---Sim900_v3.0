@@ -47,6 +47,14 @@ void EEPROMWritelong(int Address, long value)
   EEPROM.write(Address + 3, one);
 }
 
+asdlkfj ;asdf
+asdkfj asdf
+;lkasd f
+kajs df sad
+ads fk sadf
+khas df as
+
+
 //This read function will return a 4 byte (32bit) long from the eeprom at the specified Address to adress + 3.
 long EEPROMReadlong(long Address)
 {
